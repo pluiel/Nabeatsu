@@ -16,25 +16,17 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
+        
     
-    func isAho() ->Bool{
-        if number % 3 == 0{
-            return true  //アホになる
-        }
-        var checkNumber: Int = number //3がつくか判断するための変数を宣言
-        
-        while checkNumber != 0 {
-            if checkNumber % 10 == 3 {
-            return true // アホになる
-                
-            }else {
-                checkNumber = checkNumber / 10
-        }
-          
+    func isAho() -> Bool {
+        if number % 3 == 0 {
+             return true  //アホになる
+         }
+        return false
     }
-        func plusButton(){
+        
+    func plusButton(){
         number = number + 1
         countLabel.text = String(number)
         
@@ -48,7 +40,4 @@ class ViewController: UIViewController {
     }
 
 
-
 }
-}
-
