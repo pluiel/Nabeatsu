@@ -20,13 +20,27 @@ class ViewController: UIViewController {
         
     
     func isAho() -> Bool {
-        if number % 3 == 0 {
-             return true  //アホになる
-         }
-        return false
-    }
         
-    func plusButton(){
+        if number % 3 == 0 {
+            return true
+        }
+ 
+    var checkNum: Int = number
+    
+    while checkNum != 0 {
+        if checkNum % 10 == 3 {
+    
+        return true
+     
+    } else {
+      checkNum = checkNum / 10
+        }
+}
+        
+    return false
+        }
+    
+    @IBAction func plusButton() {
         number = number + 1
         countLabel.text = String(number)
         
@@ -38,6 +52,5 @@ class ViewController: UIViewController {
             faceLabel.text = "(゜o゜)"
         }
     }
-
 
 }
